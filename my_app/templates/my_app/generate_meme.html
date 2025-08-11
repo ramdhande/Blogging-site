@@ -1,0 +1,33 @@
+{%  extends "my_app/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+			<form method ="POST" id="memeform">
+					{% csrf_token %}
+					<fieldset class="form-group">
+						{{ form|crispy }}
+					</fieldset>
+					<input type="text" name="topic" placeholder="Enter a topic (e.g., pet animals)" required>
+						<button class="btn btn-outline-danger" type="submit">Generate Meme Caption</button>	
+			</form>
+
+			<p id="captionResult">this is our result</p>
+
+			<script>
+				document.getElementById("memeForm").onsubmit = async function(event) {
+	    event.preventDefault();
+	    let formData = new FormData(this);
+
+	    let response = await fetch("{% url 'generate_meme_caption' %}", {
+	        method: "POST",
+	        body: formData
+	    });
+
+	    let data = await response.json();
+	    document.getElementById("captionResult").innerText = data.caption;
+	};
+			</script>
+				
+		
+ 
+{%  endblock content %}
