@@ -6,8 +6,7 @@ from .views import (
     PostCreateView, 
     PostUpdateView, 
     PostDeleteView,
-    UserPostListView,
-    generate_meme_caption
+    UserPostListView
 )   
 
 urlpatterns = [
@@ -18,7 +17,7 @@ urlpatterns = [
     path('post/new', PostCreateView.as_view(), name='post-create'),
     path('post/<int:pk>/update', PostUpdateView.as_view(), name='post-update'),
     path('post/<int:pk>/delete', PostDeleteView.as_view(), name='post-delete'),
-    path("generate-meme/", generate_meme_caption, name="generate_meme_caption"),
+    #path("generate-meme/", generate_meme_caption, name="generate_meme_caption"),
     
 
 

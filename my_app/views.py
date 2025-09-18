@@ -1,4 +1,4 @@
-from openai import OpenAI 
+#from openai import OpenAI 
 import os
 from dotenv import load_dotenv
 
@@ -8,7 +8,7 @@ load_dotenv()
 #print("LOADED API KEY:",openai.api_key )  # For debugging
 
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+#client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 """
 response = openai.ChatCompletion.create(
     model="gpt-3.5-turbo",
@@ -123,7 +123,7 @@ def about(request):
 
 # do the fucking API call 
 
-def generate_meme_caption(request):
+"""def generate_meme_caption(request):
 	if request.method == "POST":
 		user_input = request.POST.get("topic", "")
 
@@ -136,5 +136,5 @@ def generate_meme_caption(request):
 		return JsonResponse({"caption":"meme caption generate!!"})
 
 	return render(request, "my_app/generate_meme.html")	
-
+"""
 
