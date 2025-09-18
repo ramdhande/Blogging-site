@@ -6,12 +6,12 @@ A **Django-powered Blogging Application** where users can create, edit, and shar
 
 ## Features
 
-* ✍️ User-friendly blog creation & editing
-* 👤 User authentication (signup, login, logout)
-* 📑 Categories & tagging system
-* 💬 Comment system for interaction
-* 🔍 Search functionality for blogs
-* 📱 Responsive UI
+* User-friendly blog creation & editing
+* User authentication (signup, login, logout)
+* Categories & tagging system
+* Comment system for interaction
+* Search functionality for blogs
+* Responsive UI
 
 ---
 
@@ -41,7 +41,7 @@ Blogging-site/
 └── README.md           # Documentation
 ```
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome!
 
